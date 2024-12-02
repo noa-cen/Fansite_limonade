@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact</title>
+    <link href="style.css" rel="stylesheet"> <!-- Lien vers ton fichier CSS -->
+    <link rel="icon" type="image/x-icon" href="./images/limonade.ico">
+
+    <!-- Ajout des polices Monserrat et Poiret One -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poiret+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="headerNavbar">
+        <nav class="navbar">
+            <div class="limonade">
+                <img src="./images/limonade_logo.svg" alt="Logo de limonade" class="logo">
+                <h2>Limonade</h2>
+            </div>
+            <div class="nav-link">
+                <ul>
+                    <li class="active"><a href="index.html"><img src="./images/home.svg" 
+                        alt="logo d'accueil" class="logo"></a></li>
+                    <li><a href="fansite1.html">Blackpink</a></li>
+                    <li><a href="fansite2.html">EuroMillions</a></li>
+                    <li><a href="fansite3.html">La Scaloneta</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="responsive">
+                <input type="checkbox" id="menu-hamburger">
+                <label for="menu-hamburger"></label>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h1>Formulaire de Contact</h1>
+            
+            <form method="post" action="traitement.php">
+                <!-- Champs de base obligatoires : -->
+                <p><strong>*</strong> champs non-obligatoire</p>
+                
+                <fieldset id="contacter">
+                    <div>
+                        <label for="prenom">Votre Prénom :</label>
+                        <input type="text" name="prenom" id="prenom" required>
+                    </div>
+                    <div>
+                        <label for="nom">Votre Nom :</label>
+                        <input type="text" name="nom" id="nom" required>
+                    </div>
+                    <div>
+                        <label for="email">Votre Adresse e-mail :</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="telephone">Votre Numéro de Téléphone :</label>
+                        <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}" required>
+                    </div>
+                </fieldset>
+                
+                <fieldset id="message">
+                    <div>
+                        <label for="sujet">Votre Sujet :</label>
+                        <input type="text" name="sujet" id="sujet" required>
+                    </div>
+                    
+
+                    <!-- Sélection de la catégorie : -->
+                    <div>
+                        <label for="categorie">Sélectionnez la catégorie suivante :</label>
+                        <select name="categorie" id="categorie" required>
+                            <option value="" disabled selected>-- Choisissez une catégorie --</option>
+                            <option value="support">Support technique</option>
+                            <option value="question">Question générale</option>
+                            <option value="reclamation">Réclamation</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <!-- Ajouter un fichier : -->
+                    <div>
+                        <label for="fichier">Joindre un fichier : <strong>*</strong></label>
+                        <input type="file" name="fichier" id="fichier" accept=".jpg,.png,.pdf,.docx">
+                    </div>
+
+                    <!-- Entrer un message avec du texte libre : -->
+                    <div>
+                        <label for="message">Votre message :</label><br>
+                        <textarea name="message" id="message" required rows="5"></textarea>
+                    </div>
+
+                    <!-- Champs masqués antispam : Pour détecter les robots spam : -->
+                    <input type="text" name="antispam" style="display:none;">
+
+                </fieldset>
+
+                <fieldset id="validation">
+                    <!-- Politique de consentement : -->
+                    <div>
+                        <label>
+                            <input type="checkbox" name="consentement" required>
+                            J'accepte que mes données soient utilisées conformément à la <a href="politique-confidentialite.html">politique de confidentialité</a>.
+                        </label>
+                    </div>
+
+                    <!-- Bouton de soumission : -->
+                        <button type="submit">Envoyer</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <section class="planSite">
+            <article class="menuFooter">
+                <h2><a href="index.html">Bienvenue</a></h2>
+                <ul>
+                    <li><a href="fansite1.html">Blackpink</a></li>
+                    <li><a href="fansite2.html">EuroMillions</a></li>
+                    <li><a href="fansite3.html">La Scaloneta</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </article>
+            <article class="menuBlackpink">
+                <h2>Blackpink</h2>
+                    <ul>
+                        <li><a href="./fansite1.html">Histoire</a></li>
+                        <li><a href="./fansite1-membres.html">Les membres</a></li>
+                        <li><a href="./fansite1-galerie.html">La galerie</a></li>
+                    </ul>
+            </article>
+            <article class="menuEuroMillions">
+                <h2>EuroMillions</h2>
+                    <ul>
+                        <li><a href="./fansite2.html">Accueil</a></li>
+                        <li><a href="./jeux.html">Nos Jeux</a></li>
+                        <li><a href="./numéros-maudits.html">Les Numéros Maudits</a></li>
+                        <li><a href="./resultats.html">Les Résultats</a></li>
+                    </ul>
+            </article>
+            <article class="menuScaloneta">
+                <h2>La Scaloneta</h2>
+                <ul>
+                    <li><a href="fansite3.html">Accueil</a></li>
+                    <li><a href="histoire.html">Un peu d'histoire</a></li>
+                    <li><a href="worldcup.html">FIFA World Cup 2022</a></li>
+                    <li><a href="phenomene.html">Le phénomène social</a></li>
+                </ul>
+            </article>
+        </section>
+        <p class="copyright">Limonade © 2024 - Tous droits réservés.</p>
+    </footer>
+</body>
+
+<script>
+    const menuHamburger = document.querySelector("#menu-hamburger")
+    const navLinks = document.querySelector(".nav-link")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+</script>
+
+</html>

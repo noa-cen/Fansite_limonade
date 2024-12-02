@@ -1,0 +1,913 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+    /* border: red;
+    border-style: solid; */
+}
+
+:root {
+    --primary-color: #6CACE4;
+    --secondary-color : #FFFFFF;
+    --tertiary-color: #000000;
+    --limonade-color : #D8D8D8;
+    --blackpink : #EFA7B5;
+    --euromillions : #EEBB05;
+}
+
+@font-face {
+    font-family: "argentina";
+    src: url(./Images/AdiCupQ2022.ttf);
+}
+
+/* Navbar et menu */
+.headerNavbar {
+    width: 100%;
+    background-color: var(--primary-color);
+
+    .navbar {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        padding: 5px 32px;
+
+        .logo {
+            max-width: 50px;
+        }
+
+        h1 {
+            font-family: "argentina";
+            letter-spacing: 1pt;
+            font-size: 32pt;
+            color: var(--secondary-color);
+            cursor: default;
+        }
+        .openbtn:hover {
+            color: var(--tertiary-color);
+        }
+        .openbtn {
+            font-size: 36pt;
+            cursor: pointer;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+    }
+}
+
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    opacity: 0.9;
+    overflow-x: hidden;
+    transition: 0.4s ease;
+    padding-top: 60px;
+  
+    a {
+        font-family: "argentina";
+        font-size: 20pt;
+        color: var(--secondary-color);
+        display: block;
+    }
+    ul {
+        padding-top: 24px;
+    }
+    ul li a {
+        padding: 24px 48px;
+    }
+    ul li.active a {
+        color: var(--tertiary-color);
+    }
+    a:hover {
+        color: var(--tertiary-color);
+    }
+    .closebtn {
+        position: absolute;
+        top: 2px;
+        right: 35px;
+        font-size: 36pt;
+        cursor: pointer;
+      }
+}
+/* Fin navbar et menu */
+
+/* Page accueil*/
+main {
+    p {
+        font-family: "Montserrat", sans-serif;
+    }
+    h2, h3 {
+        font-family: "argentina";
+    }
+    .todos {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            object-position: 50% 65%;
+    }
+        
+    section.articles {
+        display: flex;
+        flex-direction: column;
+        padding: 48px;
+        gap: 40px;
+
+        img {
+            width: 222px;
+            height: 271px;
+            padding: 8px 16px;
+        }
+
+        article {
+            max-width: 1376px;
+            border: 2px solid var(--primary-color);
+            border-radius: 16px;
+            box-shadow: 2px 5px #6cace47f;
+            display: flex;
+            justify-content: space-around;
+        }
+        .histoire, .worldcup, .phenomene {
+            transition: transform .2s;
+            max-height: 300px;
+
+            .text p {
+                overflow:hidden;
+                line-height: 1rem;
+                max-height: 14rem;
+                -webkit-box-orient: vertical;
+                display: block;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 14;
+            }
+        }
+        .histoire:hover, .worldcup:hover, .phenomene:hover {
+            transform: scale(1.02);
+        }   
+        .histoire img, .phenomene img {
+            object-fit: cover;
+        }
+        .worldcup img {
+            object-fit: contain;
+        }
+        .text {
+            width: 50%;
+            padding: 12px;
+            cursor: pointer;
+            
+            h2 {
+                font-size: 14pt;
+                text-align: center;
+                padding-bottom: 8px;
+            }
+            p {
+                font-size: 12pt;
+                text-align: justify;
+                }
+            a {
+                color: var(--tertiary-color);
+
+            }
+        }
+    }
+}
+/* Fin page accueil */
+
+/* Main*/
+main {
+    section.histoire, section.coupemonde, section.celebrations {
+        display: flex;
+        flex-direction: column;
+
+        article {
+            padding: 40px 48px;
+        }
+        h2 {
+            text-align: center;
+            padding-bottom: 24px;
+        }
+        p {
+            text-align: justify;
+            padding: 8px;
+        }
+        .paysage {
+            width: 500px;
+            height: 280px;
+            object-fit: cover;
+        }
+        .portrait {
+            width: 222px;
+            height: 285px;
+            object-fit: cover;
+        }
+        .scaloni {
+            object-position: 50% 0%;
+        }
+        .trofeos {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .center {
+            width: 700px;
+            height: 350px;
+            padding: 0 24px 24px 24px;
+            display: block;
+            margin: auto;
+        }
+        .left {
+            float: left;
+            padding: 24px 24px 24px 0;
+        }
+        .right {
+            float: right;
+            padding: 24px 0 24px 24px;
+        }
+        .video {
+            width: 100%;
+            height: 90vh;
+            padding-top: 16px;
+        }
+    }
+
+    section.histoire, section.celebrations {
+        padding-top: 0;
+    }
+
+    section.histoire {
+        article:nth-of-type(2n+2) {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        .center {
+            object-fit: cover;
+        }
+    }
+        
+    section.coupemonde {
+        padding: 32px 0 16px 0;
+        
+        .fifa {
+            display: flex;
+            flex-direction: row;
+            background-color: var(--primary-color);
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+           h2 {
+            font-size: 26pt;
+            color: var(--secondary-color);
+            text-align: center;
+            } 
+            img {
+            width: 15%;
+            object-fit: contain;
+            }
+        } 
+
+        h3 {
+            text-align: center;
+            font-size: 20pt;
+            padding-bottom: 16px;
+        }
+
+        article:nth-of-type(2n+3) {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        .center {
+            object-fit: contain;
+        }
+        .poule {
+            h3 {
+                padding-bottom: 8px;
+            }
+            p {
+                padding: 88px 0;
+            }
+        }
+        .finale {
+            p {
+                padding: 8px 0;
+            }
+        }
+    }
+
+    section.celebrations {
+        article:nth-of-type(2n+2) {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+    }  
+   
+/* Caroussel équipe */
+    .carousel-container {
+        width: 95vw;
+        margin: 16px 24px;
+        padding: 8px 0;
+        overflow-x: auto;
+        display: flex;
+        align-items: center;
+        scroll-snap-type: x mandatory;
+
+        div {
+            font-family: "Montserrat", sans-serif;
+            text-align: justify;
+            padding: 8px;
+
+            img {
+                height: 55vh;
+                padding-bottom: 8px;
+            }
+        }
+    }
+    
+    .carousel-container::-webkit-scrollbar {
+        height: 14px;
+        width: 100vw;
+    }
+    
+    .carousel-container::-webkit-scrollbar-track {
+        background: var(--secondary-color);
+        border: 1px solid var(--tertiary-color);
+        border-radius: 10px;
+    }
+    
+    .carousel-container::-webkit-scrollbar-thumb {
+        background: var(--tertiary-color);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    .carousel-slide {
+        flex: 1 0 30%;
+        aspect-ratio: 1;
+        flex-flow: column nowrap;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        scroll-snap-align: center;
+
+        h2 {
+            color: var(--tertiary-color);
+        }
+    }
+    .carousel-slide:nth-of-type(2n+1) {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+    }
+    .carousel-slide:nth-of-type(2n+2) {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+/* Fin caroussel équipe */
+
+/* Caroussel phénomène */
+    section.carousel-celebrations {
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+
+        .carousel-item {
+            h2 {
+                font-size: 30pt;
+            }
+            .blanc {
+                color: var(--secondary-color);
+            }
+            p {
+                font-size: 20pt;
+            }
+        }
+        
+        article.monde {
+            h2 {
+                text-align: center;
+                padding-bottom: 24px;
+            }
+        }
+
+        .carousel-wrapper {
+            position:relative;
+            width: 90vw;
+            height: 85vh;
+            margin:0 auto;
+        }
+
+        .carousel-item {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 25px 50px;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
+        }
+        .arrow {
+            border: solid var(--tertiary-color);
+            border-width: 0 6px 6px 0;
+            display: inline-block;
+            padding: 12px;
+        }
+          
+        .arrow-prev {
+            left: -30px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(135deg);
+        }
+           
+        .arrow-next {
+            right: -30px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+          
+        /*Select every element*/
+        [id^="item"], [id^="pic"] {
+            display: none;
+        }
+          
+        .item-1 {
+            z-index: 1;
+            opacity: 1;
+            background: url('./Images/1.jpg');
+            background-size: cover;
+            background-position: 50% 55%;
+        }
+        .item-2 {
+            background: url('./Images/2.jpg');
+            background-size: cover;
+            background-position: 50% 55%;
+        }
+        .item-3 {
+            background: url('./Images/3.webp');
+            background-size: cover;
+        }
+        .item-4 {
+            background: url('./Images/4.jpg');
+            background-size: cover;
+            background-position: 50% 55%;
+        }
+        .item-5 {
+            background: url('./Images/5.jpeg');
+            background-size: cover;
+        }
+        .item-6 {
+            background: url('./Images/6.jpeg');
+            background-size: cover;
+        }
+        .item-7 {
+            background: url('./Images/7.jpeg');
+            background-size: cover;
+            background-position: 50% 42%;
+        }
+        .item-8 {
+            background: url('./Images/8.webp');
+            background-size: cover;
+        }
+        .item-9 {
+            background: url('./Images/9.jpeg');
+            background-size: cover;
+            background-position: 50% 5%;
+        }
+        .item-10 {
+            background: url('./Images/10.jpg');
+            background-size: cover;
+        }
+        .item-11 {
+            background: url('./Images/11.jpeg');
+            background-size: cover;
+            background-position: 50% 80%;
+        }
+        .item-12 {
+            background: url('./Images/evacuacion.jpg');
+            background-size: cover;
+            background-position: 50% 40%;
+        }
+
+        .pic-1 {
+            z-index: 1;
+            opacity: 1;
+            background: url('./Images/cordoba.webp');
+            background-size: cover;
+        }
+        .pic-2 {
+            background: url('./Images/rosario.jpeg');
+            background-size: cover;
+            background-position: 50% 60%;
+        }
+        .pic-3 {
+            background: url('./Images/mar-del-plata.jpg');
+            background-size: cover;
+        }
+        .pic-4 {
+            background: url('./Images/jujuy.jpg');
+            background-size: cover;
+            background-position: 50% 40%;
+        }
+        .pic-5 {
+            background: url('./Images/bangladesh2.jpg');
+            background-size: cover;
+            background-position: 50% 55%;
+        }
+        .pic-6 {
+            background: url('./Images/bangladesh.jpg');
+            background-size: cover;
+            background-position: 50% 40%;
+        }
+        .pic-7 {
+            background: url('./Images/naples.webp');
+            background-size: cover;
+            background-position: 50% 60%;
+        }
+        .pic-8 {
+            background: url('./Images/barcelona.jpg');
+            background-size: cover;
+            background-position: 50% 60%;
+        }
+        .pic-9 {
+            background: url('./Images/madrid.webp');
+            background-size: cover;
+        }
+        .pic-10 {
+            background: url('./Images/sydney.webp');
+            background-size: cover;
+            background-position: 50% 70%;
+        }
+        .pic-11 {
+            background: url('./Images/New-York.webp');
+            background-size: cover;
+            background-position: 50% 60%;
+        }
+        .pic-12 {
+            background: url('./Images/paris.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-color: var(--secondary-color);
+        }
+          
+        *:target ~ .item-1, *:target ~ .pic-1 {
+            opacity: 0;
+        }
+          
+        #item-1:target ~ .item-1, #pic-1:target ~ .pic-1 {
+            opacity: 1;
+        }
+          
+        #item-2:target ~ .item-2, #item-3:target ~ .item-3, 
+        #item-4:target ~ .item-4, #item-5:target ~ .item-5, #item-6:target ~ .item-6,
+        #item-7:target ~ .item-7, #item-8:target ~ .item-8, #item-9:target ~ .item-9,
+        #item-10:target ~ .item-10, #item-11:target ~ .item-11, #item-12:target ~ .item-12,
+        #pic-2:target ~ .pic-2, #pic-3:target ~ .pic-3, 
+        #pic-4:target ~ .pic-4, #pic-5:target ~ .pic-5, #pic-6:target ~ .pic-6,
+        #pic-7:target ~ .pic-7, #pic-8:target ~ .pic-8, #pic-9:target ~ .pic-9,
+        #pic-10:target ~ .pic-10, #pic-11:target ~ .pic-11, #pic-12:target ~ .pic-12 {
+            z-index: 2;
+            opacity: 1;
+        }
+    }  
+/* Fin caroussel phénomène */
+}
+/* Fin main */
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 24px;
+  
+    .planSite {
+        font-family: "argentina";
+        font-size: 10pt;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    .titre {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 12px;
+    }
+    .logo {
+        width: 40px;
+    }
+    .redes {
+        width: 40px;
+    }
+    .icon {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }  
+    
+    .menuFooter, .menuScaloneta {
+        display: flex;
+        flex-direction: row;
+        gap: 48px;
+        justify-content: flex-start;
+        align-items: last baseline;
+    }  
+    article {
+        ul li {
+            padding-bottom: 8px;
+        }
+        h2 a, ul li a {
+            color: var(--secondary-color);
+        }
+        h2 a:hover, ul li a:hover {
+            color: var(--tertiary-color);
+        }
+        .icon li:hover {
+            transform: scale(1.3);
+        }
+        .limonade a:hover {
+            color: var(--limonade-color);
+        }
+        li.blackpink a:hover {
+            color: var(--blackpink);
+        }
+        li.euromillions a:hover {
+            color: var(--euromillions);
+        }
+    }
+    p {
+        font-family: "Poiret One", serif;
+        font-size: 12pt;
+        text-align: center;
+        padding-top: 32px; 
+    }
+}
+/* Fin footer */
+
+/* (Plus de 1141px) */
+@media (min-width: 1141px) {
+    main {
+        section.articles {
+            .histoire {
+                background-image: url("./Images/background1.png");
+                background-position: 50% 45%;
+            }
+           
+            .worldcup {
+                background-image: url("./Images/background2.png");
+                background-size: cover;
+                background-position: 50% 55%;
+            }
+            .phenomene {
+                background-image: url("./Images/background3.png");
+                background-size: cover;
+                background-position: 50% 40%;
+            }
+        }
+    }
+}
+
+/* (Moins de 1140px) */
+@media (max-width: 1140px) {
+    main {
+        section.articles {
+            background-image: url("./Images/ballon.png");
+            background-repeat: no-repeat;
+            background-position: 130% 30%;
+
+            .mobile {
+                display: none;
+            }
+        }
+        section.histoire, section.coupemonde, section.celebrations {
+            article {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+
+/* (Moins de 768px) */
+@media (max-width: 768px) {
+    .headerNavbar {
+        .sidepanel {
+            a {
+                font-size: 14pt;
+            }
+            .closebtn {
+                font-size: 36px;
+            }
+        }
+        .navbar {
+            h1 {
+                font-size: 24pt;
+            }
+        }
+    }
+
+    main {
+        .todos {
+            height: 40vh;
+        }
+        
+        section.articles {
+            background-size: 80%;
+            padding: 32px;
+
+            img {
+                width: 30%;
+            }
+
+            .histoire, .worldcup, .phenomene {
+                .text {
+                    width: 60%;
+                    p {
+                        max-height: 12rem;
+                        -webkit-line-clamp: 12;
+                    }
+                }
+            }
+        }
+
+        section.histoire, section.coupemonde, section.celebrations {
+            article {
+                padding: 32px 40px;
+            }
+            h2 {
+                padding-bottom: 0;
+            }
+            .paysage, .trofeos, .portrait, .center {
+                width: 100%;
+                height: auto;
+            }
+            .center {
+                padding: 16px 0;
+            }
+            .left, .right {
+                float: none;
+                padding: 16px 0;
+            }
+            .video {
+                height: 50vh;
+            }
+        }
+
+        section.histoire {
+            h2 {
+                padding-bottom: 16px;
+            }
+        }
+
+        section.carousel-celebrations {
+            padding: 24px;
+
+            .carousel-item {
+                h2 {
+                    font-size: 20pt;
+                }
+                p {
+                    font-size: 16pt;
+                }
+            }
+    
+            .carousel-wrapper {
+                width: 80vw;
+                height: 65vh;
+            }
+    
+            .arrow {
+                padding: 8px;
+            }
+
+            .arrow-prev {
+                left: -20px;
+            }
+               
+            .arrow-next {
+                right: -20px;
+            }
+        }
+
+        section.coupemonde {
+            .poule {
+                p {
+                    padding: 0;
+                }
+            }
+        }
+
+        .carousel-slide {
+            flex: 1 0 60%;
+          }
+    }
+    footer {
+        font-size: 8pt;
+
+        .planSite {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+        .menuReseaux {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+        } 
+    }
+}
+
+/* (Moins de 530px) */
+@media (max-width: 530px) {
+    .headerNavbar {
+        .navbar {
+            h1 {
+                font-size: 18pt;
+            }
+        }
+    }
+    main {
+        .todos {
+            height: 30vh;
+        }
+        
+        section.articles {
+            .histoire, .worldcup, .phenomene {
+                img {
+                    height: 30vh;
+                }
+                .text {
+                    width: 50%;
+
+                    h2 {
+                        font-size: 14pt;
+                    }
+                    p {
+                        max-height: 8rem;
+                        -webkit-line-clamp: 8;
+                    }
+                }
+            }
+        }
+
+        section.histoire, section.coupemonde, section.celebrations {
+                article {
+                    padding: 16px;
+                }
+                h2, h3 {
+                    font-size: 14pt;
+                }
+        }
+
+        section.coupemonde {
+            .fifa {
+                h2 {
+                    font-size: 16pt;
+                }
+            }
+        }
+
+        section.carousel-celebrations {
+            .carousel-item, .monde {
+                h2 {
+                    font-size: 14pt;
+                }
+            }
+    
+            .carousel-wrapper {
+                height: 30vh;
+            }
+        } 
+        
+        footer {
+            font-size: 6pt;
+        }
+    }
+}
+
+/* (Moins de 335px) */
+@media (max-width: 335px) {
+    .headerNavbar {
+        .navbar {
+            h1 {
+                font-size: 14pt;
+            }
+        }
+        .sidepanel {
+            a {
+                padding-left: 80px;
+            }
+        }
+    }
+}
