@@ -26,3 +26,6 @@ We decided to name our website Limonade because this word has all the letters of
 
 ### <u>Preview :</u>
 ![Limonade screenshot](./preview_index.jpg)
+
+### <u>Model Figma :</u>
+![Scaloneta model](./maquette.png)
