@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire de Contact</title>
     <link href="style.css" rel="stylesheet"> <!-- Lien vers ton fichier CSS -->
-    <link rel="icon" type="image/x-icon" href="./images/limonade.ico">
+    <link rel="icon" type="image/x-icon" href="Images/limonade.ico">
 
     <!-- Ajout des polices Monserrat et Poiret One -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,12 +17,12 @@
     <header class="headerNavbar">
         <nav class="navbar">
             <div class="limonade">
-                <img src="./images/limonade_logo.svg" alt="Logo de limonade" class="logo">
+                <img src="Images/limonade_logo.svg" alt="Logo de limonade" class="logo">
                 <h2>Limonade</h2>
             </div>
             <div class="nav-link">
                 <ul>
-                    <li class="active"><a href="index.html"><img src="./images/home.svg" 
+                    <li class="active"><a href="index.html"><img src="Images/home.svg" 
                         alt="logo d'accueil" class="logo"></a></li>
                     <li><a href="fansite1.html">Blackpink</a></li>
                     <li><a href="fansite2.html">EuroMillions</a></li>
@@ -41,9 +41,7 @@
         <section id="contact">
             <h1>Formulaire de Contact</h1>
             
-            <form method="post" action="traitement.php">
-                <!-- Champs de base obligatoires : -->
-                <p><strong>*</strong> champs non-obligatoire</p>
+            <form>
                 
                 <fieldset id="contacter">
                     <div>
@@ -85,7 +83,7 @@
 
                     <!-- Ajouter un fichier : -->
                     <div>
-                        <label for="fichier">Joindre un fichier : <strong>*</strong></label>
+                        <label for="fichier">Joindre un fichier : </label>
                         <input type="file" name="fichier" id="fichier" accept=".jpg,.png,.pdf,.docx">
                     </div>
 
@@ -101,13 +99,6 @@
                 </fieldset>
 
                 <fieldset id="validation">
-                    <!-- Politique de consentement : -->
-                    <div>
-                        <label>
-                            <input type="checkbox" name="consentement" required>
-                            J'accepte que mes données soient utilisées conformément à la <a href="politique-confidentialite.html">politique de confidentialité</a>.
-                        </label>
-                    </div>
 
                     <!-- Bouton de soumission : -->
                         <button type="submit">Envoyer</button>
